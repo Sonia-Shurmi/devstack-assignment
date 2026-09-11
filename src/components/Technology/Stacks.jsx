@@ -32,49 +32,59 @@ const Stacks = ({ selectedTechnologies, setSelectedTechnologies }) => {
                 </p>
             </div>
 
-            {/* Selected Technologies */}
-            <div className="space-y-2">
+            {/* Empty State */}
+            {selectedTechnologies.length === 0 ? (
+                <div className="border border-dashed border-slate-300 rounded-xl p-6 text-center">
+                    <p className="text-sm font-medium text-slate-500">
+                        Your stack is empty
+                    </p>
+                </div>
+            ) : (
 
-                {selectedTechnologies.map((technology) => (
+                /* Selected Technologies */
+                <div className="space-y-2">
 
-                    <div
-                        key={technology.id}
-                        className="flex items-center justify-between border border-slate-200 rounded-lg p-3"
-                    >
+                    {selectedTechnologies.map(
+                        ({ id, name, category, icon }) => (
 
-                        <div className="flex items-center gap-3">
+                            <div
+                                key={id}
+                                className="flex items-center justify-between border border-slate-200 rounded-lg p-3"
+                            >
 
-                            <img
-                                src={technology.icon}
-                                alt={technology.name}
-                                className="w-8 h-8 object-contain"
-                            />
+                                <div className="flex items-center gap-3">
 
-                            <div>
-                                <h4 className="text-sm font-semibold text-gray-900">
-                                    {technology.name}
-                                </h4>
+                                    <img
+                                        src={icon}
+                                        alt={name}
+                                        className="w-8 h-8 object-contain"
+                                    />
 
-                                <p className="text-xs text-[#64748B]">
-                                    {technology.category}
-                                </p>
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-900">
+                                            {name}
+                                        </h4>
+
+                                        <p className="text-xs text-[#64748B]">
+                                            {category}
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <button
+                                    onClick={() => handleRemove(id)}
+                                    className="text-slate-400 hover:text-red-500 transition-colors"
+                                >
+                                    <FaXmark size={16} />
+                                </button>
+
                             </div>
+                        )
+                    )}
 
-                        </div>
-
-                        {/* Remove */}
-                        <button
-                            onClick={() => handleRemove(technology.id)}
-                            className="text-slate-400 hover:text-red-500 transition-colors"
-                        >
-                            <FaXmark size={16} />
-                        </button>
-
-                    </div>
-
-                ))}
-
-            </div>
+                </div>
+            )}
 
             {/* Remove All */}
             {selectedTechnologies.length > 0 && (
