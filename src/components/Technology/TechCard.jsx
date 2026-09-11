@@ -24,12 +24,12 @@ const TechCard = ({
 
   const handleAdd = () => {
     if (isSelected) {
-      toast.info("Already added to your stack!");
-      return;
+        toast.info("Already added to your stack!");
+        return;
     }
 
     handleAddToStack(technology);
-  };
+};
 
   return (
     <div className="card bg-base-100 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
