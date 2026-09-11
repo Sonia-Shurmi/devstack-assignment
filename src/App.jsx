@@ -1,15 +1,24 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
+import Technology from './components/Technology/Technology'
+import { Suspense } from 'react';
+
+const fetchTechnologies = async () => {
+    const response = await fetch("/data.json");
+    return response.json();
+};
+
+const technologiesPromise = fetchTechnologies();
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <h1>hello</h1>
+    <Navbar></Navbar>
+    <Hero></Hero>
+    <Suspense fallback={<div>Loading technologies...</div>}>
+        <Technology technologiesPromise={technologiesPromise} />
+    </Suspense>
     </>
   )
 }
