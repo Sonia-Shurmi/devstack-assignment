@@ -59,6 +59,7 @@ const TechCard = ({ technology, selectedTechnologies, setSelectedTechnologies, h
                 <button 
                     className="w-full mt-5 py-2.5 rounded-lg bg-black text-white font-semibold hover:bg-gray-800 transition-colors"
                     onClick={() => handleAddToStack(technology)}
+                    disabled={selectedTechnologies.some((tech) => tech.id === technology.id)}
                 >
                     Add to Stack
                 </button>
