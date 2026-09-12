@@ -1,17 +1,37 @@
+import React, { Dispatch, SetStateAction } from "react";
 import { FaXmark } from "react-icons/fa6";
+import { toast } from "react-toastify";
+import type { Technology } from "../../types/types";
 
-const Stacks = ({ selectedTechnologies, setSelectedTechnologies }) => {
+interface StacksProps {
+    selectedTechnologies: Technology[];
+    setSelectedTechnologies: Dispatch<SetStateAction<Technology[]>>;
+}
 
-    const handleRemove = (id) => {
+const Stacks = ({
+    selectedTechnologies,
+    setSelectedTechnologies,
+}: StacksProps) => {
+
+    const handleRemove = (id: number) => {
+        const technology = selectedTechnologies.find(
+            technology => technology.id === id
+        );
+
         const remainingTechnologies = selectedTechnologies.filter(
             technology => technology.id !== id
         );
 
         setSelectedTechnologies(remainingTechnologies);
+
+        if (technology) {
+            toast.info(`${technology.name} removed from your stack!`);
+        }
     };
 
     const handleRemoveAll = () => {
         setSelectedTechnologies([]);
+        toast.info("All technologies removed from your stack!");
     };
 
     return (

@@ -1,8 +1,15 @@
-import React from "react";
-import { FaStar } from "react-icons/fa";
+import type { Dispatch, SetStateAction } from "react";
 import TechCard from "./TechCard";
+import { Technology } from "../../types/Types";
 
-const TechnologyCards = ({ technologies, selectedTechnologies, setSelectedTechnologies, handleAddToStack }) => {
+interface TechnologyCardsProps {
+    technologies: Technology[];
+    selectedTechnologies: Technology[];
+    setSelectedTechnologies: Dispatch<SetStateAction<Technology[]>>;
+    handleAddToStack: (technology: Technology) => void;
+}
+
+const TechnologyCards = ({ technologies, selectedTechnologies, setSelectedTechnologies, handleAddToStack }: TechnologyCardsProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {technologies.map((technology) => (

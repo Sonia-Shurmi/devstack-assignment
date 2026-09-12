@@ -56,12 +56,12 @@ const Navbar = () => {
                     </nav>
 
                     {/* Auth Buttons */}
-                    <div className="flex items-center gap-2">
-                        <button className="px-4 py-2 rounded-full border border-[#DB2777] bg-transparent text-[#DB2777] hover:bg-[#DB2777] hover:text-white transition-colors">
+                    <div className="flex items-center gap-4">
+                        <button className="text-gray-700 font-medium hover:text-[#9D174D] transition-colors">
                             Sign In
                         </button>
 
-                        <button className="px-4 py-2 rounded-full border border-[#DB2777] bg-transparent text-[#DB2777] hover:bg-[#DB2777] hover:text-white transition-colors">
+                        <button className="px-5 py-2 rounded-full bg-[#DB2777] text-white font-medium hover:bg-[#BE185D] transition-colors">
                             Sign Up
                         </button>
                     </div>
