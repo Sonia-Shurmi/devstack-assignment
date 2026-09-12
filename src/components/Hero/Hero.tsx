@@ -1,10 +1,9 @@
-import React from 'react';
-import heroImg from '../../assets/banner-stack.png';
+import heroImg from "../../assets/banner-stack.png";
 
 const Hero = () => {
     return (
         <section className="bg-white">
-            <div className="max-w-[1200px] mx-auto px-4 py-16 md:py-24">
+            <div className="max-w-[1200px] mx-auto px-4 py-10 md:py-24">
                 <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
                     {/* Hero Content */}

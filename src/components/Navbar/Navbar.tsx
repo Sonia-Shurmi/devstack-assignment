@@ -48,7 +48,7 @@ const Navbar = () => {
                             </li>
 
                             <li>
-                                <a className="text-gray-700 hover:text-[#DB2777] transition-colors">
+                                <a className="text-gray-700 hover:text-[#DB27777] transition-colors">
                                     Contact
                                 </a>
                             </li>

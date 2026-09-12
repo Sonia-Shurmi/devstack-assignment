@@ -28,7 +28,7 @@ const Technology = ({ technologiesPromise }: TechnologyProps) => {
         <div className="max-w-[1200px] mx-auto px-4 py-16 md:py-20">
 
             {/* Section Heading */}
-            <div className="text-center mb-12">
+            <div className="mb-12">
                 <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
                     Explore{" "}
                     <span className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
