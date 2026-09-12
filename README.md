@@ -1,16 +1,43 @@
-# React + Vite
+<!-- Name -->
+DevStack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- Description -->
+DevStack is a simple web application that helps developers explore different technologies and build their ideal development stack by selecting technologies from different categories.
 
-Currently, two official plugins are available:
+<!-- Technologies Used -->
+React, TypeScript, Vite, Tailwind CSS, React Icons, React Toastify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<!-- Features -->
+1. Explore technologies by category with detailed information.
+2. Add technologies to a personal stack and remove them anytime.
+3. Prevent duplicate selections with interactive toast notifications.
 
-## React Compiler
+<!-- React Questions -->
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+i. What is JSX, and why is it used in React?
 
-## Expanding the ESLint configuration
+JSX is a syntax that lets us write HTML-like code inside JavaScript. It makes React components easier to create and understand.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ii. What is the difference between props and state?
+
+Props are used to pass data from a parent component to a child component. State is data managed inside a component that can change over time.
+
+iii. What does the useState hook do, and where did you use it in this project?
+
+useState lets a component store and update data. I used it in the Technology component to keep track of the selected technologies in the stack.
+
+iv. What does the useEffect hook do, and why did you need it to load the JSON data?
+
+useEffect runs side effects after a component renders, such as fetching data. In this project, however, I used a Promise with React's use() and Suspense to load the JSON data, so I did not need useEffect.
+
+v. Why does every item in a .map() list need a unique key prop?
+
+A unique key helps React identify each item when the list changes. It allows React to update the list efficiently.
+
+vi. What is conditional rendering? Show one place you used it.
+
+Conditional rendering means showing different UI based on a condition. I used it in the Stack component to show "Your stack is empty" when no technology has been selected.
+
+vii. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+A parent passes data to a child through props. To send something back, the parent can pass a function as a prop, and the child can call that function with the required data.

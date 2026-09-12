@@ -18,17 +18,12 @@ const technologiesPromise = fetchTechnologies();
 function App() {
     return (
         <>
-            <Navbar />
-            <Hero />
-
+            <Navbar></Navbar>
+            <Hero></Hero>
             <Suspense fallback={<div>Loading technologies...</div>}>
-                <Technology
-                    technologiesPromise={technologiesPromise}
-                />
+                <Technology technologiesPromise={technologiesPromise}></Technology>
             </Suspense>
-
-            <Footer />
-
+            <Footer></Footer>
             <ToastContainer />
         </>
     );
