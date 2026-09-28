@@ -1,43 +1,180 @@
-<!-- Name -->
-DevStack
+# 💻 DevStack
 
-<!-- Description -->
-DevStack is a simple web application that helps developers explore different technologies and build their ideal development stack by selecting technologies from different categories.
+> **Explore technologies. Build your ideal developer stack.**
 
-<!-- Technologies Used -->
-React, TypeScript, Vite, Tailwind CSS, React Icons, React Toastify
+DevStack is a responsive web application that helps developers explore different technologies and create a personalized development stack.
 
-<!-- Features -->
-1. Explore technologies by category with detailed information.
-2. Add technologies to a personal stack and remove them anytime.
-3. Prevent duplicate selections with interactive toast notifications.
+Users can browse technologies by category, view their details, add technologies to their stack, and manage their selected technologies interactively.
 
-<!-- React Questions -->
+## 🌐 Live Demo
 
-i. What is JSX, and why is it used in React?
+**[Visit DevStack](https://devstack-assignment.netlify.app/)**
 
-JSX is a syntax that lets us write HTML-like code inside JavaScript. It makes React components easier to create and understand.
+## 📸 Preview
 
-ii. What is the difference between props and state?
+<!-- Add a screenshot of the live project here -->
 
-Props are used to pass data from a parent component to a child component. State is data managed inside a component that can change over time.
+![DevStack Preview](./src/assets/banner-stack.png)
 
-iii. What does the useState hook do, and where did you use it in this project?
+## 🛠️ Technologies Used
 
-useState lets a component store and update data. I used it in the Technology component to keep track of the selected technologies in the stack.
+* **React** — Building reusable user interface components
+* **TypeScript** — Type-safe development
+* **Vite** — Development server and build tool
+* **Tailwind CSS** — Utility-first styling
+* **DaisyUI** — UI components
+* **React Icons** — Interface icons
+* **React Toastify** — Toast notifications
+* **SweetAlert2** — Interactive alerts
 
-iv. What does the useEffect hook do, and why did you need it to load the JSON data?
+## ✨ Key Features
 
-useEffect runs side effects after a component renders, such as fetching data. In this project, however, I used a Promise with React's use() and Suspense to load the JSON data, so I did not need useEffect.
+### 🔍 Explore Technologies
 
-v. Why does every item in a .map() list need a unique key prop?
+Browse a collection of technologies across different categories, including:
 
-A unique key helps React identify each item when the list changes. It allows React to update the list efficiently.
+* Frontend
+* Backend
+* Database
+* Language
+* Styling
+* DevOps
+* Tools
 
-vi. What is conditional rendering? Show one place you used it.
+Each technology card provides information such as:
 
-Conditional rendering means showing different UI based on a condition. I used it in the Stack component to show "Your stack is empty" when no technology has been selected.
+* Technology name
+* Description
+* Category
+* Difficulty
+* Rating
+* Badge
+* Technology icon
 
-vii. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+### 🧩 Build Your Stack
 
-A parent passes data to a child through props. To send something back, the parent can pass a function as a prop, and the child can call that function with the required data.
+Users can add technologies to their personal development stack.
+
+The selected stack updates dynamically as technologies are added or removed.
+
+### 🚫 Duplicate Prevention
+
+A technology cannot be added to the stack more than once.
+
+Users receive a notification when they try to add a technology that has already been selected.
+
+### 🗑️ Manage Your Stack
+
+Users can:
+
+* Remove individual technologies
+* Remove all selected technologies
+* View the number of selected technologies
+* See an empty-state message when no technologies are selected
+
+### 📱 Responsive Interface
+
+The application is designed to provide a smooth experience across different screen sizes, including desktop, tablet, and mobile devices.
+
+## 📂 Data Source
+
+Technology information is stored locally in:
+
+```text
+public/data.json
+```
+
+The application loads this data and displays the technologies dynamically.
+
+## 📦 Dependencies
+
+### Main Dependencies
+
+* `react`
+* `react-dom`
+* `react-icons`
+* `@react-icons/all-files`
+* `react-toastify`
+* `sweetalert2`
+* `tailwindcss`
+* `@tailwindcss/vite`
+
+### Development Dependencies
+
+* `typescript`
+* `vite`
+* `@vitejs/plugin-react`
+* `daisyui`
+* `eslint`
+* `eslint-plugin-react-hooks`
+* `eslint-plugin-react-refresh`
+* `@types/react`
+* `@types/react-dom`
+
+## 🚀 Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Sonia-Shurmi/devstack-assignment.git
+```
+
+### 2. Go to the project directory
+
+```bash
+cd devstack-assignment
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+### 5. Open in your browser
+
+```text
+http://localhost:5173
+```
+
+## 📁 Project Structure
+
+```text
+src/
+├── components/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Navbar/
+│   └── Technology/
+│
+├── assets/
+├── types/
+│
+├── App.tsx
+├── App.css
+└── index.css
+
+public/
+└── data.json
+```
+
+## 🎯 Project Goal
+
+DevStack was built to practice modern React development, component-based architecture, TypeScript, state management, responsive UI design, and interactive user experiences.
+
+## 🔗 Links
+
+* 🌐 **Live Demo:** https://devstack-assignment.netlify.app/
+* 💻 **Repository:** https://github.com/Sonia-Shurmi/devstack-assignment
+
+---
+
+<p align="center">
+  Built with ❤️ using React & TypeScript
+</p>
